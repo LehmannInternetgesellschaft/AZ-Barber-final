@@ -1,0 +1,905 @@
+
+/* G L O B A L E S -- S T Y L I N G */
+html {
+    overflow-x: hidden;
+}
+
+/* Formatierung fFür alle Elemente */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Alle Überschriften h2 */
+h2{
+    font-size: 3cap ;
+    color: black;
+    font-style: normal;
+    padding: 3%;
+
+}
+
+h1{
+    color: black;
+    text-align: center;
+    align-items: center;
+    padding: 3%;
+    padding-bottom: 0%;
+    font-size: 5cap;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing:  0.1cap;;
+    font-style: normal;
+
+}
+
+h3{
+    text-align: center;
+    align-items: center;
+    font-size: 2cap;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing:  0.1cap;
+    font-style: italic;
+
+}
+
+.text-container {
+    padding: 2%;
+    margin: 5%;
+    margin-right: 20%;
+    margin-left: 20%;
+    background-color: white;
+}
+
+/* F A R B E N -- S T Y L I N G */
+
+/* FARBE - HEADER */
+header{
+    background-color:  black;
+}
+/* FARBE - BODY*/
+body{
+    background-color: lightblue;
+}
+/* FARBE - MAIN Sollte selbe Farbe wie Body sein, liegt jedoch über body*/
+.main{
+background-color: #fefae0;
+}
+
+/* FARBE - FOOTER */
+footer{
+    background-color: lightblue;
+}
+.index-image {
+    padding: 5%;
+}
+
+
+/* E L E M E N T E -- S T Y L I N G  */
+
+
+/* Im Body - Alle Elemente einschließend */
+.wrapper{
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    right: 0;
+}
+
+/* Header-Leiste mit Bäcker-Logo und NavBar Links */
+header{
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    z-index: 100;
+    margin-top: 0;
+    padding-top: 0;
+    padding: 10px;
+    flex: 1 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header:hover{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    z-index: 100;
+    margin-top: 0;
+    padding-top: 0;
+    padding: 10px;
+    flex: 1 100%;
+    transition: 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+
+header:not(:hover) {
+    height: 7%;
+    transition: 1s ease-in-out;
+
+}
+
+/* NAVBAR */
+.navbar{
+    min-height: 70xp;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+}
+/* NAVBAR - Bäcker-Logo / Schriftzug im Header */
+.nav-branding{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;  
+}
+
+.header:hover .nav-branding{
+    transition: 0.8s ease-in-out;
+    font-size: 4rem;
+    color: white;
+    text-decoration: none;  
+}
+
+.header:not(:hover) .nav-branding{
+    font-size: 2rem;
+    transition: 1.4s ease-in-out;
+}
+/* NAVBAR - Liste der Links für Navbar*/
+li{
+    list-style: none;
+}
+/* NAVBAR - Menu styling in der Navbar */
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    font-size: 25px;
+    
+}
+/* NAVBAR - Links styling */
+.nav-link{
+    transition: 0.7s ease;
+    color: white;
+    text-decoration: none;  
+}
+/* NAVBAR - Hover Farbe Links in Navbar */
+.nav-link:hover{
+    color: lightblue;
+}
+/* NAVBAR - Hamburger Menu Button */
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+/* NAVBAR - Styling der einzelnen Striche des Hamburger Menu Buttons */
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* Article Formatierung für wichtigsten Teil der Seite*/
+.main{
+    text-align: left;
+    height: 100%;
+    font-size: 20px;
+    margin-top: 4%;
+    padding: 10px;
+    flex: 1 100%;
+}
+
+
+
+/* Footer, enthält Anfahr und Google Karte*/
+footer{
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    order: 4;
+    padding: 10px;
+    flex: 1 100%;
+    font-style: italic;
+    color: grey;
+}
+
+
+
+
+
+
+/* S E I T E N -- S T Y L I N G  */
+
+.hidden {
+    display: none;
+
+}
+
+/* START / GEBÄCK / BESTELLEN - Container einzelner Gebäck- und Tortenauswahl */
+.image-container  {
+    width: 32%;
+    position: relative;
+    margin-bottom: 2px;
+    overflow: hidden;
+    display: inline-flex;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+
+}
+
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.content{
+    color: white;
+    text-align: center;
+
+
+}
+
+.overlay .content {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#female {
+    width: 32%;
+    position: relative;
+    float: left;
+    padding: 1%;
+}
+
+#male {
+    width: 32%;
+    position: relative;
+    float: left;
+    padding: 1%;
+}
+
+#boys {
+    width: 32%;
+    position: relative;
+    float: left;
+    padding: 1%;
+}
+
+#male-form {
+    width: 100%;
+    position: relative;
+    padding: 0%;
+
+}
+
+#female-form {
+    width: 100%;
+    position: relative;
+    padding: 0%;
+
+}
+
+.image-container-male-image,
+.image-container-boys-image,
+.image-container-female-image {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: inline-flex;
+
+}
+
+.image-male-image,
+.image-female-image, 
+.image-boys-image {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.overlay-male-image,
+.overlay-female-image,
+.overlay-boys-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.content-male-image,
+.content-female-image,
+.content-boys-image {
+    color: white;
+    text-align: center;
+
+
+}
+
+
+.bestellen-button-maenner,
+.bestellen-button-frauen,
+.bestellen-button-boys {
+z-index: 5;
+position: absolute;
+display:flex;
+border: 4px solid white;
+font-size: larger;
+border-radius: 10px;
+cursor: pointer;
+padding: 4px;
+top: 85%;
+left: 40%;
+color: white;
+text-decoration: none; 
+transition: background-color 1s, color 1s
+}
+
+.bestellen-button-maenner:hover,
+.bestellen-button-frauen:hover,
+.bestellen-button-boys:hover {
+
+    border: 4px solid white;
+    background-color: lightblue;
+    color: black;
+}
+
+.overlay .content {
+    position: relative;
+    z-index: 1;
+}
+
+label{
+    padding-right: 12px 12px 12px 0;
+}
+
+input[type="text"],input[type="date"], input[type="time"],input[type="number"],select,textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: Verdana, Arial, Calibri;
+    margin-top: 6px;
+
+}
+input[type="submit"],button[type="submit"] {
+    background-color: #00b33c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s ease background-color;
+}
+button[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+input[type="delete"],button[type="delete"] {
+    background-color: lightcoral;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s ease background-color;
+}
+
+
+
+
+.chronik-ueberschrift{
+    font-size: larger;
+}
+.chronik-text {
+    font-size: larger;
+}
+
+.appointment-image {
+    width: 100px;
+    display: block;
+    margin: 0;
+}
+
+.container-form-background{
+    top: 15%;
+    bottom: 7%;
+    right: 23%;
+    left: 23%;
+    position: absolute;
+    opacity: .9;
+    background-color: #fefae0;
+}
+
+
+.container-form{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    margin-bottom: 25%;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.container-form-gender{
+    padding-left: 25%;
+    padding-right: 25%;
+    align-items: center;
+}
+.slider{
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+.navigation-manual{
+    position: absolute;
+    width: 1200px;
+    display: flex;
+    margin-top: 660px;
+    justify-content: center;
+}
+  
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background: white;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+}
+ 
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+    margin-top: 660px;
+}
+  
+.navigation-auto div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+  
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+  
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: white;
+}
+  
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: white;
+}
+  
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: white;
+}
+.bestellen-button-termine {
+    display: inline-block;
+    margin-top: 30%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+@media (max-width: 700px) {
+
+    h1{
+        text-align: center;
+        align-items: center;
+        padding: 3%;
+        font-size: 3cap;
+        font-family:'Times New Roman', Times, serif;
+        letter-spacing:  0cap;;
+    
+    }
+
+    h3{
+        text-align: center;
+        align-items: center;
+        font-size: 1.5cap;
+        font-family:'Times New Roman', Times, serif;
+        letter-spacing:  0cap;
+        font-style: italic;
+    
+    }
+
+    .index-image {
+        padding: 1%;
+    }
+    .bestellen-button-termine {
+        display: inline-block;
+        margin-top: 30%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
+
+    .bestellen-button-termine:hover {
+        display: inline-block;
+        margin-top: 30%;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        transition: 0.5s ease;
+        border: 1px solid white;
+        border-radius: 30px;
+    }
+
+    .bestellen-button-termine:not(:hover) {
+        display: inline-block;
+        margin-top: 30%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        transition: 1s ease;    
+    }
+
+
+    .hamburger{
+        display: block;
+
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        z-index: 100;
+        position:fixed;
+        left: -120%;
+        top: 40px;
+        gap: 0;
+        border-radius: 0px;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 1s;
+    }
+
+    .nav-branding{
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;  
+    }
+    
+    .header:hover .nav-branding{
+        transition: 0.8s ease-in-out;
+        font-size: 2.3rem;
+        color: white;
+        text-decoration: none;  
+    }
+    
+    .header:not(:hover) .nav-branding{
+        font-size: 2rem;
+        transition: 1.4s ease-in-out;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+        
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+    .Karte-gross{
+        display: none;
+    }
+
+    .Karte-klein{
+        display: block;
+    }
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        margin-top: 80%;
+        margin-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+    }
+
+    .overlay:hover {
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        margin-top: 60%;
+        margin-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+        transition: 1s ease;
+    }
+    .overlay:not(:hover) {
+        height: 20%;
+        margin-top: 80%;
+        transition: 2s ease;
+    
+    }
+    
+    .image-container {
+    position: relative;
+    overflow: hidden;
+    width: 48%; /* Adjust the width based on your preference */
+    display: inline-table;
+
+
+    }
+
+    .main{
+        height: 100%;
+        font-size: 20px;
+        margin-top: 4%;
+        padding: 0px;
+        padding-top: 10%;
+    }
+        
+    .slider {
+        display: none;
+    }
+
+    .appointment-image img{
+        height: 900px;
+    }
+
+
+    .container-form-background{
+        top: 16%;
+        bottom: 2%;
+        right: 23%;
+        left: 23%;
+        position: absolute;
+        opacity: .9;
+        background-color: #fefae0;
+    }
+    
+    
+    .container-form{
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 35%;
+        margin-bottom: 25%;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .container-form-gender{
+        padding-left: 15%;
+        padding-right: 15%;
+        align-items: center;
+    }
+
+
+    #male {
+        width: 100%;
+        position: relative;
+        float: left;
+        padding: 1%;
+    
+    }
+    
+    #female {
+        width: 100%;
+        position: relative;
+        float: left;
+        padding: 1%;
+    
+    }
+
+    #boys {
+        width: 100%;
+        position: relative;
+        float: left;
+        padding: 1%;
+    
+    }
+
+    .text-container {
+        padding: 2%;
+        margin: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-color: white;
+    
+    }
+
+
+    .image-container-male-image,
+    .image-container-female-image,
+    .image-container-boys-image {
+        padding: 5%;
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        display: inline-flex;
+    
+    }
+    .image-male-image,
+    .image-female-image,
+    .image-boys-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    
+    }
+    
+    .overlay-male-image,
+    .overlay-female-image,
+    .overlay-boys-image {
+        padding-top: 0%;
+        z-index: 0;
+        position: absolute;
+        top: 75%;
+        right: 5%;
+        left: 5%;
+        height: 25%;
+        width: 90%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    
+    }
+    
+    .content-male-image,
+    .content-female-image,
+    .content-boys-image {
+        color: white;
+        text-align: center;
+        z-index: 2;
+    
+    
+    }
+
+    .bestellen-button-maenner,
+    .bestellen-button-frauen,
+    .bestellen-button-boys {
+        z-index: 5;
+        position: absolute;
+        display:flex;
+        border: 4px solid white;
+        font-size: larger;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 4px;
+        top: 90%;
+        left: 40%;
+        color: white;
+        text-decoration: none; 
+        transition: background-color 1s, color 1s
+    }
+    .bestellen-button-maenner:hover,
+    .bestellen-button-frauen:hover,
+    .bestellen-button-boys:hover {
+
+        border: 4px solid white;
+        background-color: lightblue;
+        color: black;
+    }
+
+    
+}
+
+
+@media (min-width: 700px) {
+    .Karte-gross{
+        display: block;
+    }
+
+    .Karte-klein{
+        display: none;
+    }
+}
