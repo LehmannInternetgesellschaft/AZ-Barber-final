@@ -10,6 +10,8 @@ html {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-appearance: none; /* Verhindert die Standard-Styling des Browsers */
+
 }
 
 /* Alle Überschriften h2 */
@@ -99,7 +101,6 @@ header{
     flex: 1 100%;
     justify-content: center;
     align-items: center;
-
 }
 
 header:hover{
@@ -589,41 +590,6 @@ button[type="submit"]:hover {
     .index-image {
         padding: 1%;
     }
-    .bestellen-button-termine {
-        display: inline-block;
-        margin-top: 30%;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        font-size: 1.5em;
-    }
-
-
-    .bestellen-button-termine:hover {
-        display: inline-block;
-        margin-top: 30%;
-        padding: 10px;
-        background-color: black;
-        color: white;
-        text-decoration: none;
-        font-size: 1.5em;
-        transition: 0.5s ease;
-        border: 1px solid white;
-        border-radius: 30px;
-    }
-
-    .bestellen-button-termine:not(:hover) {
-        display: inline-block;
-        margin-top: 30%;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        font-size: 1.5em;
-        transition: 1s ease;    
-    }
-
 
     .hamburger{
         display: block;
