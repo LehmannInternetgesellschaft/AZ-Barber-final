@@ -395,6 +395,9 @@ input[type="text"],input[type="date"], input[type="time"],input[type="number"],s
     resize: vertical;
     font-family: Verdana, Arial, Calibri;
     margin-top: 6px;
+    -webkit-appearance: none; /* Verhindert die Standard-Styling des Browsers */
+}
+
 
 }
 input[type="submit"],button[type="submit"] {
